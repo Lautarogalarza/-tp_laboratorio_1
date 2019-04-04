@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Function.h"
+#include <ctype.h>
 
 void pedirNumero( float* Pnum )
 {
@@ -9,6 +10,7 @@ void pedirNumero( float* Pnum )
     scanf("%f",Pnum);
 }
 
+
 float suma( float numA, float numB )
 {
     float resultadoSuma;
@@ -16,7 +18,6 @@ float suma( float numA, float numB )
     resultadoSuma= numA + numB;
 
     return resultadoSuma;
-
 }
 
 float resta( float numA, float numB)

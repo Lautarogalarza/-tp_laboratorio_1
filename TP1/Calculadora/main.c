@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "Function.h"
 
 int main()
@@ -53,12 +54,16 @@ int main()
         switch(option)
         {
         case 1:
+
             pedirNumero(&numeroUno);
             flag1=1;
+
             break;
         case 2:
+
             pedirNumero(&numeroDos);
             flag2=1;
+
             break;
         case 3:
             if(flag1==1 && flag2==1)
@@ -101,9 +106,35 @@ int main()
                     printf("ERROR...No se puede dividir un numero por 0");
                 }
 
-                printf("EL factorial de %.1f es: %d\n", numeroUno, resultadoFactorialA);
 
-                printf("EL factorial de %.1f es: %d\n", numeroDos, resultadoFactorialB);
+                if(numeroUno<=0)
+                {
+
+
+
+                    printf("ERROR...No existe el factorial de numeros negativos\n\n");
+                }
+                else
+                {
+
+                    printf("EL factorial de %.1f es: %d\n", numeroUno, resultadoFactorialA);
+                }
+
+
+
+                if(numeroDos<=0)
+                {
+
+
+
+                    printf("ERROR...No existe el factorial de numeros negativos\n\n");
+                }
+                else
+                {
+
+                    printf("EL factorial de %.1f es: %d\n", numeroDos, resultadoFactorialB);
+                }
+
 
             }
             else if(flag1==1 && flag2==1 && flag3==0)

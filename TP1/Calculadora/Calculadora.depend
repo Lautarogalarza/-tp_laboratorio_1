@@ -11,3 +11,17 @@
 
 1554257754 c:\users\lautaro\desktop\nueva carpeta (3)\tp1\calculadora\function.h
 
+1554343524 source:c:\users\lautaro\desktop\nueva carpeta (3)\tp_laboratorio_1\tp1\calculadora\function.c
+	<stdio.h>
+	<stdlib.h>
+	"Function.h"
+	<ctype.h>
+
+1554343532 c:\users\lautaro\desktop\nueva carpeta (3)\tp_laboratorio_1\tp1\calculadora\function.h
+
+1554343524 source:c:\users\lautaro\desktop\nueva carpeta (3)\tp_laboratorio_1\tp1\calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"Function.h"
+
