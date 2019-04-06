@@ -3,7 +3,7 @@
 #include "Function.h"
 #include <ctype.h>
 
-void pedirNumero( float* Pnum )
+void askNumber( float* Pnum )
 {
     printf("\nIngrese un numero: ");
     fflush(stdin);
@@ -11,44 +11,44 @@ void pedirNumero( float* Pnum )
 }
 
 
-float suma( float numA, float numB )
+float Addition( float numA, float numB )
 {
-    float resultadoSuma;
+    float additionResult;
 
-    resultadoSuma= numA + numB;
+    additionResult= numA + numB;
 
-    return resultadoSuma;
+    return additionResult;
 }
 
-float resta( float numA, float numB)
+float Substraction( float numA, float numB)
 {
-    float resultadoResta;
+    float subtractionResult;
 
-    resultadoResta= numA - numB;
+    subtractionResult= numA - numB;
 
-    return resultadoResta;
+    return subtractionResult;
 }
 
-float multiplicacion( float numA, float numB)
+float multiplication( float numA, float numB)
 {
-    float resultadoMultiplicacion;
+    float multiplicationResult;
 
-    resultadoMultiplicacion= numA * numB;
+    multiplicationResult= numA * numB;
 
-    return resultadoMultiplicacion;
+    return multiplicationResult;
 }
 
 float division( float numA, float numB)
 {
-    float resultadoDivision;
+    float divisionResult;
 
-    resultadoDivision= numA / numB;
+    divisionResult= numA / numB;
 
-    return resultadoDivision;
+    return divisionResult;
 }
 int factorial(float num)
 {
-    int resultadoFactorial=1;
+    long int resultadoFactorial=1;
     int i;
 
     for (i=(int)num;i>=1;i--)

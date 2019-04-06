@@ -6,14 +6,14 @@
 int main()
 {
     int option;
-    float numeroUno;
-    float numeroDos;
-    float resultadoSuma;
-    float resultadoResta;
-    float resultadoMultiplicacion;
-    float resultadoDivision;
-    int resultadoFactorialA;
-    int resultadoFactorialB;
+    float numberOne;
+    float numberTwo;
+    float additionResult;
+    float subtractionResult;
+    float multiplicationResult;
+    float divisionResult;
+    long int factorialResultA;
+    long int factorialResultB;
     int flag1=0;
     int flag2=0;
     int flag3=0;
@@ -27,7 +27,7 @@ int main()
 
         if(flag1==1)
         {
-            printf("\n(1) Ingrese el 1er operando (A)= %.2f",numeroUno);
+            printf("\n(1) Ingrese el 1er operando (A)= %.2f",numberOne);
         }
         else
         {
@@ -37,7 +37,7 @@ int main()
 
         if(flag2==1)
         {
-            printf("\n(2) Ingrese el 2do operando (B)= %.2f",numeroDos);
+            printf("\n(2) Ingrese el 2do operando (B)= %.2f",numberTwo);
         }
         else
         {
@@ -55,25 +55,25 @@ int main()
         {
         case 1:
 
-            pedirNumero(&numeroUno);
+            askNumber(&numberOne);
             flag1=1;
 
             break;
         case 2:
 
-            pedirNumero(&numeroDos);
+            askNumber(&numberTwo);
             flag2=1;
 
             break;
         case 3:
             if(flag1==1 && flag2==1)
             {
-                resultadoSuma=suma(numeroUno, numeroDos);
-                resultadoResta=resta(numeroUno, numeroDos);
-                resultadoMultiplicacion=multiplicacion(numeroUno, numeroDos);
-                resultadoDivision=division(numeroUno, numeroDos);
-                resultadoFactorialA=factorial(numeroUno);
-                resultadoFactorialB=factorial(numeroDos);
+                additionResult=Addition(numberOne, numberTwo);
+                subtractionResult=Substraction(numberOne, numberTwo);
+                multiplicationResult=multiplication(numberOne, numberTwo);
+                divisionResult=division(numberOne, numberTwo);
+                factorialResultA=factorial(numberOne);
+                factorialResultB=factorial(numberTwo);
 
                 printf("\nSE REALIZARON TODAS LAS OPERACIONES POSIBLES\n\n");
 
@@ -90,24 +90,39 @@ int main()
             {
                 printf("\nAl realizar el factorial solo se tomo en cuenta la parte entera del numero\n\n");
 
-                printf("EL resultado de %.1f + %.1f es: %.1f\n", numeroUno, numeroDos, resultadoSuma);
-                printf("EL resultado de %.1f - %.1f es: %.1f\n", numeroUno, numeroDos, resultadoResta);
-                printf("EL resultado de %.1f * %.1f es: %.1f\n", numeroUno, numeroDos, resultadoMultiplicacion);
+                printf("EL resultado de %.2f + %.2f es: %.2f\n", numberOne, numberTwo, additionResult);
+                printf("EL resultado de %.2f - %.2f es: %.2f\n", numberOne, numberTwo, subtractionResult);
+                printf("EL resultado de %.2f * %.2f es: %.2f\n", numberOne, numberTwo, multiplicationResult);
 
-                if(numeroDos!=0)
+                if(numberTwo!=0)
                 {
 
-                    printf("EL resultado de %.1f / %.1f es: %.1f\n", numeroUno, numeroDos, resultadoDivision);
+                    printf("EL resultado de %.2f / %.2f es: %.2f\n", numberOne, numberTwo, divisionResult);
 
                 }
                 else
                 {
 
-                    printf("ERROR...No se puede dividir un numero por 0");
+                    printf("ERROR...No se puede dividir un numero por 0\n");
                 }
 
 
-                if(numeroUno<=0)
+                if(numberOne<=0)
+                {
+
+
+
+                    printf("ERROR...No existe el factorial de numeros negativos\n");
+                }
+                else
+                {
+
+                    printf("EL factorial de %d es: %ld\n", (int)numberOne, factorialResultA);
+                }
+
+
+
+                if(numberTwo<=0)
                 {
 
 
@@ -117,22 +132,7 @@ int main()
                 else
                 {
 
-                    printf("EL factorial de %.1f es: %d\n", numeroUno, resultadoFactorialA);
-                }
-
-
-
-                if(numeroDos<=0)
-                {
-
-
-
-                    printf("ERROR...No existe el factorial de numeros negativos\n\n");
-                }
-                else
-                {
-
-                    printf("EL factorial de %.1f es: %d\n", numeroDos, resultadoFactorialB);
+                    printf("EL factorial de %d es: %ld\n", (int)numberTwo, factorialResultB);
                 }
 
 
