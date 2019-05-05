@@ -49,24 +49,24 @@
 	<conio.h>
 	"ArrayEmployees.h"
 
-1557079057 source:c:\users\lautaro\desktop\nueva carpeta\tp2\main.c
+1557094751 source:c:\users\lautaro\desktop\nueva carpeta\tp2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayEmployees.h"
 
-1557085067 c:\users\lautaro\desktop\nueva carpeta\tp2\arrayemployees.h
+1557097021 c:\users\lautaro\desktop\nueva carpeta\tp2\arrayemployees.h
 	"UTN_INPUT.h"
 
-1557079057 c:\users\lautaro\desktop\nueva carpeta\tp2\utn_input.h
+1557095564 c:\users\lautaro\desktop\nueva carpeta\tp2\utn_input.h
 
-1557079057 source:c:\users\lautaro\desktop\nueva carpeta\tp2\utn_input.c
+1557092611 source:c:\users\lautaro\desktop\nueva carpeta\tp2\utn_input.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	"UTN_INPUT.h"
 
-1557086206 source:c:\users\lautaro\desktop\nueva carpeta\tp2\arrayemployees.c
+1557094698 source:c:\users\lautaro\desktop\nueva carpeta\tp2\arrayemployees.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

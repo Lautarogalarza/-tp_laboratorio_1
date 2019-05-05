@@ -186,7 +186,7 @@ int getValidInt(char requestMessage[],char errorMessage[], int lowLimit, int hiL
     {
         if (!getStringNumeros(requestMessage,auxStr))
         {
-            printf ("\nerror solo numeros por favor\n\n");
+            printf ("ERROR, solo ingrese numeros \n");
             continue;
 
         }

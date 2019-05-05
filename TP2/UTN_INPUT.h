@@ -24,11 +24,23 @@ float getFloat(char mensaje[]);
  */
 char getChar(char mensaje[]);
 
+
+/** \brief funcion que recibe un caracter validando que sea f o m y los pasa a mayuscula
+ *
+ * \param mensaje[] char Es el mensaje a ser mostrado
+ * \param mensajeError[] char Mensaje de error
+ * \param input char* puntero a un caracter
+ * \return char devuelve el caracter f O m en mayuscula
+ *
+ */
 char getSexChar(char mensaje[],char mensajeError[],char* input);
-
+/** \brief Funcion que pasa una a cadena a miniscula y su primer elemento a mayuscula
+ *
+ * \param cadena[] char la cadena a ser convertida
+ * \return void no retorna nada
+ *
+ */
 void stringToUpper(char cadena[]);
-
-
 /**
  * \brief Verifica si el valor recibido es numérico
  * \param str Array con la cadena a ser analizada
@@ -92,12 +104,14 @@ int getStringNumeros(char mensaje[],char input[]);
  * \return 1 si el texto contiene solo números
  */
 int getStringNumerosFlotantes(char mensaje[],char input[]);
+/** \brief Solicita un número al usuario y lo valida
 
-/**
- * \brief Solicita un numero entero al usuario y lo valida
- * \param requestMessage Es el mensaje a ser mostrado para solicitar el dato
- * \param requestMessage Es el mensaje a ser mostrado en caso de error
- * \return El número ingresado por el usuario
+ * \param requestMessage[] char Es el mensaje a ser mostrado para solicitar el dato
+ * \param errorMessage[] char Es el mensaje a ser mostrado en caso de error
+ * \param lowLimit int el menor numero posible de cargar
+ * \param hiLimit int Limite superior a validar
+ * \param input int* Se carga el numero ingresado
+ * \return int Si obtuvo el numero [0] si no [-1]
  *
  */
 int getValidInt(char requestMessage[],char errorMessage[], int lowLimit, int hiLimit,int* input);
@@ -106,15 +120,19 @@ int getValidInt(char requestMessage[],char errorMessage[], int lowLimit, int hiL
  * \param requestMessage Es el mensaje a ser mostrado para solicitar el dato
  * \param requestMessage Es el mensaje a ser mostrado en caso de error
  * \param input Array donde se cargará el texto ingresado
- * \return -
+ * \return  Si obtuvo la cadena [0] si no [-1]
  *
  */
 int getValidString(char requestMessage[],char errorMessage[], char errorMessageLenght[],char input[], int lowLimit,int maxLenght);
-/**
- * \brief Solicita un numero flotante al usuario y lo valida
- * \param requestMessage Es el mensaje a ser mostrado para solicitar el dato
- * \param errorMessage Es el mensaje a ser mostrado en caso de error
- * \return El número ingresado por el usuario
+/** \brief Solicita un numero flotante al usuario y lo valida
+ *
+ * \param requestMessage[] char Es el mensaje a ser mostrado para solicitar el dato
+ * \param errorMessage[] char Es el mensaje a ser mostrado en caso de error
+ * \param lowLimit float  Limite inferior a validar
+ * \param hiLimit float Limite superior a validar
+ * \param input float* Se carga el numero ingresado
+ * \return int  Si obtuvo el numero [0] si no [-1]
+
  *
  */
 int getValidFloat(char requestMessage[],char errorMessage[], float lowLimit, float hiLimit,float* input);
