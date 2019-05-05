@@ -471,6 +471,7 @@ int sortEmployees(Employee* list, int len, int order)
                     list[j] = auxEmp;
                 }
 
+
             }
         }
 
