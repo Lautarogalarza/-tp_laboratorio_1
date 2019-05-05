@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1557076738 source:c:\users\lautaro\desktop\employees\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h"
+
+1557075002 source:c:\users\lautaro\desktop\employees\arrayemployees.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"ArrayEmployees.h"
+
+1557073238 c:\users\lautaro\desktop\employees\arrayemployees.h
+	"UTN_INPUT.h"
+
+1557013786 c:\users\lautaro\desktop\employees\utn_input.h
+
+1557013786 source:c:\users\lautaro\desktop\employees\utn_input.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"UTN_INPUT.h"
+
