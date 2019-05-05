@@ -145,6 +145,7 @@ int removeEmployee(Employee* list, int len)
     int answer;
     int i;
     int myReturn=-1;
+    int employeeExist=0;
 
     for(i=0; i<len; i++)
     {
@@ -155,6 +156,7 @@ int removeEmployee(Employee* list, int len)
     }
 
     printf("\nQue empleado queres dar de baja? (Ingresar ID empleado) ");
+    fflush(stdin);
 
     scanf("%d",&auxId);
 
@@ -162,8 +164,9 @@ int removeEmployee(Employee* list, int len)
 
     for(i=0; i<len; i++)
     {
-        if(auxId==list[i].id)
+        if(auxId==list[i].id && list[i].isEmpty==1)
         {
+            employeeExist=1;
             getValidInt("Esta seguro que quiere darle de baja a este empleado? <1.Si-2.No>","ERROR, ingrese una opcion valida <1-2>",1,2,&answer);
 
 
@@ -172,12 +175,9 @@ int removeEmployee(Employee* list, int len)
             {
             case 1:
 
-                if(auxId==list[i].id && list[i].isEmpty==1)
-                {
                     list[i].isEmpty=0;
                     myReturn=0;
                     break;
-                }
 
                 break;
             case 2:
@@ -191,14 +191,16 @@ int removeEmployee(Employee* list, int len)
 
             break;
         }
-        else
-        {
-            printf("Error ingrese un ID que exista en el sistema\n");
-            break;
 
-        }
 
     }
+
+
+    if(employeeExist==0)
+    {
+        printf("ERROR, el empleado no existe");
+    }
+
 
     return myReturn;
 
@@ -211,6 +213,7 @@ int modifyEmployee(Employee* list, int len)
     int i;
     int index;
     int myReturn=-1;
+    int employeeExist=0;
 
 
     for(i=0; i<len; i++)
@@ -222,13 +225,15 @@ int modifyEmployee(Employee* list, int len)
     }
 
     printf("\nQue empleado quiere modificar? (Ingresar ID empleado) ");
+    fflush(stdin);
     scanf("%d",&auxId);
 
 
     index=findEmployeeById(list,len,auxId);
 
-    if(auxId==list[index].id )
+    if(auxId==list[index].id && list[index].isEmpty==1)
     {
+        employeeExist=1;
 
         getValidInt("Esta seguro que quiere modificar a este empleado? <1.Si-2.No>","ERROR, ingrese una opcion valida <1-2>",1,2,&answer);
 
@@ -236,16 +241,10 @@ int modifyEmployee(Employee* list, int len)
         {
         case 1:
 
-            for (i=0; i<len; i++)
-            {
-                if(list[i].id==auxId && list[i].isEmpty==1)
-                {
-                    modfEmpleado(list,i);
+                    modfEmpleado(list,index);
                     myReturn=0;
 
                     break;
-                }
-            }
             break;
         case 2:
             printf("Modificacion cancelada");
@@ -257,9 +256,9 @@ int modifyEmployee(Employee* list, int len)
         }
     }
 
-    else
+    if(employeeExist==0)
     {
-        printf("Error ingrese un ID que exista en el sistema\n");
+        printf("ERROR, el empleado no existe");
     }
 
 
@@ -279,7 +278,8 @@ void modfEmpleado(Employee* list, int index)
 
     do
     {
-        system("cls");
+         system("cls");
+        printf("  *** MODIFICAR ***\n\n");
         printf("\n1.Modificar Nombre\n");
         printf("2.Modificar Apellido\n");
         printf("3.Modificar Salario\n");
@@ -297,6 +297,10 @@ void modfEmpleado(Employee* list, int index)
             stringToUpper(auxNewName);
 
             strcpy(list[index].name,auxNewName);
+
+            printf("\n%s\n",auxNewName);
+            printf("\n%s\n",list[index].name);
+            printf("\nDato modificado\n");
             break;
 
         case 2:
@@ -306,6 +310,10 @@ void modfEmpleado(Employee* list, int index)
             stringToUpper(auxNewLastName);
 
             strcpy(list[index].lastName, auxNewLastName);
+
+            printf("\n%s\n",auxNewLastName);
+            printf("\n%s\n",list[index].lastName);
+            printf("\nDato modificado\n");
             break;
 
         case 3:
@@ -313,20 +321,32 @@ void modfEmpleado(Employee* list, int index)
             getValidFloat("Ingrese nuevo salario :","ERROR ingrese el salario nuevamente (solo numeros)",0,1000000,&auxNewSalary);
 
             list[index].salary=auxNewSalary;
+
+            printf("\n%.2f\n",auxNewSalary);
+            printf("\n%.2f\n",list[index].salary);
+            printf("\nDato modificado\n");
             break;
         case 4:
             getValidInt("Ingrese nuevo sector :","ERROR ingrese el sector nuevamente <1-10>",1,10,&auxNewSector);
             list[index].sector=auxNewSector;
+
+            printf("\n%d\n",auxNewSector);
+            printf("\n%d\n",list[index].sector);
+            printf("\nDato modificado\n");
             break;
         case 5:
-
+                printf("\nModificacion Exitosa\n");
             break;
         default:
-            printf("ERROR!! por favor ingrese una de las opciones validaas <1-5>\n");
+            printf("\nERROR!! por favor ingrese una de las opciones validaas <1-5>\n");
             break;
 
 
         }
+
+        fflush(stdin);
+        system("pause");
+        system("cls");
 
 
     }

@@ -12,31 +12,31 @@ typedef struct
 
 }Employee;
 
-int initEmployees(Employee* list, int len);
+int initEmployees(Employee* lista, int len);
 
-int findFreeSpace(Employee* list, int len);
+int findFreeSpace(Employee* lista, int len);
 
 int generateLastId();
 
-int addEmployee(Employee* list,int len,int id ,char name[],char lastName[],float salary,int sector);
+int addEmployee(Employee* lista,int len,int id ,char name[],char lastName[],float salary,int sector);
 
-int findEmployeeById(Employee* list, int len, int id);
+int findEmployeeById(Employee* lista, int len, int id);
 
-int printOneEmployee(Employee* list);
+int printOneEmployee(Employee* lista);
 
-int printEmployees(Employee* list, int len);
+int printEmployees(Employee* lista, int len);
 
-int removeEmployee(Employee* list, int len);
+int removeEmployee(Employee* lista, int len);
 
-int modifyEmployee(Employee* list, int len);
+int modifyEmployee(Employee* lista, int len);
 
-void modfEmpleado(Employee* list, int index);
+void modfEmpleado(Employee* lista, int index);
 
-void menu(Employee* list,int len);
+void menu(Employee* lista,int len);
 
-void findSalaryMax(Employee*list,int len);
+void findSalaryMax(Employee*lista,int len);
 
-int sortEmployees(Employee* list, int len, int order);
+int sortEmployees(Employee* lista, int len, int order);
 
 void initEmp(Employee lista[]);
 
