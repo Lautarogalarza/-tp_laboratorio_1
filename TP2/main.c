@@ -19,7 +19,7 @@ int main()
 
 
     initEmployees(arrayEmployees,ELEMENTS);
-    initEmp(arrayEmployees);
+    //initEmp(arrayEmployees);
 
     do
     {
