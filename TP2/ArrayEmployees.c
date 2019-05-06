@@ -345,14 +345,13 @@ void menuReport(Employee* list,int len)
 
         {
         case 1:
-            findSalaryMax(list,len);
-            break;
-        case 2:
-
             fflush(stdin);
-            getValidInt("Ingrese el orden <1.Ascendente-2.Descendente>","ERROR ingrese el orden nuevamente <1-2>",1,2,&order);
+            getValidInt("Ingrese el orden <1-Ascendente_2-Descendente>","ERROR ingrese el orden nuevamente <1-2>",1,2,&order);
 
             sortEmployees(list,len,order);
+            break;
+        case 2:
+            findSalaryMax(list,len);
             break;
         case 3:
             printf("\nREGRESANDO AL MENU PRINCIPAL\n");
@@ -448,6 +447,11 @@ int sortEmployees(Employee* list, int len, int order)
 
             myReturn=0;
         }
+
+        system("cls");
+        printf("EMPLEADOS ORDENADOS ASCENDENTEMENTE\n\n");
+        printEmployees(list,len);
+
         break;
     case 2://descendente
 
@@ -474,6 +478,11 @@ int sortEmployees(Employee* list, int len, int order)
 
         }
 
+
+        system("cls");
+        printf("EMPLEADOS ORDENADOS DESCENDENTEMENTE\n\n");
+        printEmployees(list,len);
+
         break;
     }
 
@@ -495,19 +504,6 @@ int employeeExist(Employee* list, int len)
 
     return existEmployee;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 void initEmp(Employee lista[])
 {

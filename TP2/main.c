@@ -19,6 +19,7 @@ int main()
 
     do
     {
+        system("color A");
         printf("INGRESE UNA OPCION PARA COMENZAR\n");
         printf("\n1.Alta\n");
         printf("2.Modificar\n");
@@ -28,6 +29,7 @@ int main()
         printf("6.Salir\n");
         printf("\nElija una opcion:" );
         fflush(stdin);
+
         scanf("%d", &option);
 
         switch(option)
@@ -53,7 +55,7 @@ int main()
             addEmployee(arrayEmployees,ELEMENTS,auxId,auxName,auxLastName,auxSalary,auxSector);
             break;
         case 2:
-            if(employeeExist(arrayEmployees,ELEMENTS)!=0)
+            if(employeeExist(arrayEmployees,ELEMENTS)==0)
             {
 
                 system("cls");
@@ -62,11 +64,11 @@ int main()
             }
             else
             {
-                printf("ERROR, Por favor cargue un empleado en el sistema");
+                printf("ERROR, Por favor cargue un empleado en el sistema\n\n");
             }
             break;
         case 3:
-            if(employeeExist(arrayEmployees,ELEMENTS)!=0)
+            if(employeeExist(arrayEmployees,ELEMENTS)==0)
             {
 
                 system("cls");
@@ -75,11 +77,11 @@ int main()
             }
             else
             {
-                printf("ERROR, Por favor cargue un empleado en el sistema");
+                printf("ERROR, Por favor cargue un empleado en el sistema\n\n");
             }
             break;
         case 4:
-            if(employeeExist(arrayEmployees,ELEMENTS)!=0)
+            if(employeeExist(arrayEmployees,ELEMENTS)==0)
             {
 
                 menuReport(arrayEmployees,ELEMENTS);
@@ -87,20 +89,26 @@ int main()
             }
             else
             {
-                printf("ERROR, Por favor cargue un empleado en el sistema");
+                printf("ERROR, Por favor cargue un empleado en el sistema\n\n");
             }
+                printf("%d\n",option);
             break;
         case 5:
-            system("cls");
-            printEmployees(arrayEmployees,ELEMENTS);
+            if(employeeExist(arrayEmployees,ELEMENTS)==0)
+            {
+                system("cls");
+                printEmployees(arrayEmployees,ELEMENTS);
+
+            }
+            else
+            {
+                printf("ERROR, Por favor cargue un empleado en el sistema\n\n");
+            }
             break;
         case 6:
-            break;
-        case 7:
             printf("\nADIOS\n");
-            break;
         default:
-            printf("\nERROR! Por favor ingrese una opcion valida <1-7>\n");
+            printf("\nERROR! Por favor ingrese una opcion valida <1-6>\n");
             break;
 
         }
@@ -108,6 +116,7 @@ int main()
         fflush(stdin);
         system("pause");
         system("cls");
+
     }
     while(option!=6);
 
