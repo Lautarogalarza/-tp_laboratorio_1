@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ArrayEmployees.h"
-#define ELEMENTS 15
+#define ELEMENTS 1000
 
 int main()
 {
@@ -15,11 +15,10 @@ int main()
     int auxId;
 
     initEmployees(arrayEmployees,ELEMENTS);
-    initEmp(arrayEmployees);
 
     do
     {
-        system("color A");
+
         printf("INGRESE UNA OPCION PARA COMENZAR\n");
         printf("\n1.Alta\n");
         printf("2.Modificar\n");
@@ -51,7 +50,7 @@ int main()
             fflush(stdin);
             getValidInt("Ingrese sector :","ERROR ingrese sector nuevamente <1-10>",1,10,&auxSector);
 
-            auxId=generateLastId();
+            auxId=generateNextId();
             addEmployee(arrayEmployees,ELEMENTS,auxId,auxName,auxLastName,auxSalary,auxSector);
             break;
         case 2:
@@ -91,7 +90,6 @@ int main()
             {
                 printf("ERROR, Por favor cargue un empleado en el sistema\n\n");
             }
-                printf("%d\n",option);
             break;
         case 5:
             if(employeeExist(arrayEmployees,ELEMENTS)==0)
@@ -106,7 +104,8 @@ int main()
             }
             break;
         case 6:
-            printf("\nADIOS\n");
+            printf("\nPROGRAMA FINALIZADO\n");
+             break;
         default:
             printf("\nERROR! Por favor ingrese una opcion valida <1-6>\n");
             break;

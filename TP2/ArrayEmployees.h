@@ -39,7 +39,7 @@ int findFreeSpace(Employee* list, int len);
  * \return Retorna el ID generado autoincrementado
  *
  */
-int generateLastId();
+int generateNextId();
 
 /** \brief Funcion encargada de añadir a los empleados en la estructura
  *
@@ -135,15 +135,6 @@ void findSalaryMax(Employee*list,int len);
  *
  */
 int sortEmployees(Employee* list, int len, int order);
-
-/** \brief Funcion encargada de hardcodear empleados en la estructura
- *
- * \param lista[] Employee Recibe un puntero al array de empleados
- * \return void la funcion no retorna nada
- *
- */
-void initEmp(Employee lista[]);
-
 /** \brief Funcion encargada de validar si existe un empleado cargado en el array
  *
  * \param list Employee* Recibe un puntero al array de empleados

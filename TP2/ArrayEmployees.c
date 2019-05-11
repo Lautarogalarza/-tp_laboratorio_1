@@ -38,7 +38,7 @@ int findFreeSpace(Employee* list, int len)
 }
 
 
-int generateLastId()
+int generateNextId()
 
 {
 
@@ -87,7 +87,7 @@ int addEmployee(Employee* list, int len,int id,char name[],char lastName[],float
 
 void  printEmployee(Employee list)
 {
-    printf("%3d %10s %10s %10.3f %9d\n",list.id,list.name,list.lastName,list.salary,list.sector);
+    printf("%3d %10s %10s  %10.3f %10d\n",list.id,list.name,list.lastName,list.salary,list.sector);
 }
 
 
@@ -95,7 +95,7 @@ int printEmployees(Employee* list, int len)
 {
     int myReturn = -1;
 
-    printf(" ID      Nombre    Apellido   Salario   Sector  \n\n");
+    printf(" ID      Nombre    Apellido    Salario     Sector  \n\n");
     for(int i=0; i < len; i++)
     {
         if(list[i].isEmpty == OCUPADO)
@@ -505,35 +505,7 @@ int employeeExist(Employee* list, int len)
     return existEmployee;
 }
 
-void initEmp(Employee lista[])
-{
-    int auxLegajo[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    char auxNombre[10][51]= {"Lautaro","Jose","Martin","Pepe","Claudia","Florencia","Miguel","Yanina","Mateo","Miriam"};
-    char auxApellido[10][51]= {"Galarza","Perez","Caridades","Ruiz","Silva","Sanchez","Garcia","Diaz","Liso","Pinno"};
-    float auxSalario[10] = { 234.500, 341.000, 456.000, 242.000, 162.000, 218.000, 326.000, 166.000, 218.500, 548.000};
-    int auxSector[10] = {1, 2, 9, 4, 5, 3, 4, 8, 5, 10};
 
-
-    for(int i=0; i<10; i++)
-    {
-        lista[i].id=auxLegajo[i];
-
-        strcpy(lista[i].name, auxNombre[i]);
-        strcpy(lista[i].lastName, auxApellido[i]);
-
-
-        lista[i].salary=auxSalario[i];
-        lista[i].sector=auxSector[i];
-
-
-        generateLastId();
-
-        lista[i].isEmpty=OCUPADO;
-
-
-
-    }
-}
 
 
 
