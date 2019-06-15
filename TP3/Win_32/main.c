@@ -67,7 +67,7 @@ int main()
             break;
         case 4:
 
-            if(controller_listExist(listaEmpleados)==0)
+            if(controller_listExist(listaEmpleados)==1)
             {
 
                 if(controller_editEmployee(listaEmpleados)==1)
@@ -89,7 +89,7 @@ int main()
             break;
         case 5:
 
-            if(controller_listExist(listaEmpleados)==0)
+            if(controller_listExist(listaEmpleados)==1)
             {
 
                 if(controller_removeEmployee(listaEmpleados)==1)
@@ -112,7 +112,7 @@ int main()
             break;
         case 6:
 
-            if(controller_listExist(listaEmpleados)==0)
+            if(controller_listExist(listaEmpleados)==1)
             {
 
                 if(controller_ListEmployee(listaEmpleados)==1)
@@ -135,7 +135,7 @@ int main()
             break;
         case 7:
 
-            if(controller_listExist(listaEmpleados)==0)
+            if(controller_listExist(listaEmpleados)==1)
             {
 
                 if(controller_sortEmployee(listaEmpleados)==0)
@@ -159,7 +159,7 @@ int main()
             break;
         case 8:
 
-            if(controller_listExist(listaEmpleados)==0)
+            if(controller_listExist(listaEmpleados)==1)
 
 
             {
@@ -189,7 +189,7 @@ int main()
             break;
         case 9:
 
-            if(controller_listExist(listaEmpleados)==0)
+            if(controller_listExist(listaEmpleados)==1)
 
             {
                 if(controller_saveAsBinary("data.bin",listaEmpleados)==1)

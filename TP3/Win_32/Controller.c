@@ -16,7 +16,7 @@ int controller_listExist(LinkedList* pArrayListEmployee)
 
         if(len>0)
         {
-            existe = 0;
+            existe = 1;
 
         }
 

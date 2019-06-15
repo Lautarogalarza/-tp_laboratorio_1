@@ -3,7 +3,7 @@
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee);
@@ -11,14 +11,14 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee);
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee);
 /** \brief busca retorna el id mas grande la lista
  *
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int controller_GetBiggestId(LinkedList* pArrayListEmployee);
@@ -26,7 +26,7 @@ int controller_GetBiggestId(LinkedList* pArrayListEmployee);
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee);
@@ -34,7 +34,7 @@ int controller_addEmployee(LinkedList* pArrayListEmployee);
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int controller_editEmployee(LinkedList* pArrayListEmployee);
@@ -42,7 +42,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee);
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int controller_removeEmployee(LinkedList* pArrayListEmployee);
@@ -50,7 +50,7 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee);
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int controller_sortEmployee(LinkedList* pArrayListEmployee);
@@ -58,7 +58,7 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee);
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int controller_ListEmployee(LinkedList* pArrayListEmployee);
@@ -67,7 +67,7 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee);
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int controller_saveAsText(char* path , LinkedList* pArrayListEmployee);
@@ -75,7 +75,7 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee);
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee);
@@ -83,7 +83,7 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee);
 /** \brief busca si existen elementos cargados en la lista
  *
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int retorna 1 si todo ok -1 si hubo error
  *
  */
 int controller_listExist(LinkedList* pArrayListEmployee);

@@ -164,9 +164,9 @@
 	"Employee.h"
 	"UTN_INPUT.h"
 
-1560566798 c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\employee.h
+1560567434 c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\employee.h
 
-1560566475 source:c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\main.c
+1560567434 source:c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\main.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -175,7 +175,7 @@
 
 1560393075 c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\linkedlist.h
 
-1560566720 c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\controller.h
+1560567485 c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\controller.h
 
 1560566720 source:c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\parser.c
 	<stdio.h>
@@ -184,7 +184,7 @@
 	"Employee.h"
 	"parser.h"
 
-1560566720 c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\parser.h
+1560567434 c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\parser.h
 
 1560393075 source:c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\utn_input.c
 	<stdio.h>
@@ -195,7 +195,7 @@
 
 1560393075 c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\utn_input.h
 
-1560566720 source:c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\controller.c
+1560567434 source:c:\users\lautaro\desktop\programacion-laboratorio-2019-master\clase 21\tp3\win_32\controller.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

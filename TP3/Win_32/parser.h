@@ -2,7 +2,7 @@
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  *
  */
 int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee);
@@ -10,7 +10,7 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee);
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
- * \return int
+ * \return int 1 si todo ok -1 si hubo error
  */
 int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee);
 
